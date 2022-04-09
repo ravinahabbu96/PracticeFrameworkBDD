@@ -21,22 +21,40 @@ Then('Validate the Dashbord text', ()=>{
 })
 
 
-Given("Visit orange HRM Site", ()=>{
-    cy.visit('https://opensource-demo.orangehrmlive.com/index.php/dashboard')
-})
+And('Fill the username and password', (dataTables)=>{
 
-And('Fill the usernames', ()=>{
-    cy.get('#txtUsername').type('Admin')
-})
+    dataTables.hashes().forEach(element => {
+        cy.get('#txtUsername').type(element.username)
+        cy.get('#txtPassword').type(element.password)
+        
+    });
 
-And('Fill the passwords', ()=>{
-    cy.get('#txtPassword').type('admin')
-})
-
-When('Click on login buttons', ()=>{
-    cy.get('#btnLogin').click()
 })
 
 Then('Validate the Error Message', ()=>{
     cy.get('#spanMessage').should('have.text', 'Invalid credentials')
 })
+
+
+
+// Given("Visit orange HRM Site", ()=>{
+//     cy.visit('https://opensource-demo.orangehrmlive.com/index.php/dashboard')
+// })
+
+// And('Fill the usernames', ()=>{
+//     cy.get('#txtUsername').type('Admin')
+// })
+
+// And('Fill the passwords', ()=>{
+//     cy.get('#txtPassword').type('admin')
+// })
+
+// When('Click on login buttons', ()=>{
+//     cy.get('#btnLogin').click()
+// })
+
+// Then('Validate the Error Message', ()=>{
+//     cy.get('#spanMessage').should('have.text', 'Invalid credentials')
+// })
+
+

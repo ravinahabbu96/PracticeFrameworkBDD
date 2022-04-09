@@ -1,4 +1,4 @@
-describe('Validate Prange hrm site', ()=>{
+describe('Validate Orange hrm site', ()=>{
 
 
     it('login with valid crentials', ()=>{
@@ -9,3 +9,4 @@ describe('Validate Prange hrm site', ()=>{
         cy.contains('Dashboard').should('be.visible')
     })
 })
+
