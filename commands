@@ -1,3 +1,19 @@
 ["**/*.js", "**/*.feature"]
 
 https://rahulshettyacademy.com/seleniumPractise/#/
+
+
+scenario outline - 2
+tags - 1
+pom - 2
+landy tech - 2
+
+
+
+// run only one senario
+// npx cypress-tags run -e TAGS="@Smoke" --headed --browser chrome
+// npx cypress run --spec cypress\integration\BDD\*.feature --headed --browser chrome
+// add cucumber report options in package.json -> output.json
+// use html report plugin/ create js file (pass the details of output)
+// run the js file
+
